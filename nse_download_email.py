@@ -32,14 +32,15 @@ from email.mime.text import MIMEText
 from email import encoders
 
 try:
-    from selenium import webdriver
-    from selenium.webdriver.chrome.options import Options as ChromeOptions
-    from selenium.webdriver.chrome.service import Service as ChromeService
+    import undetected_chromedriver as uc
     from selenium.webdriver.common.by import By
     from selenium.webdriver.support.ui import WebDriverWait
     from selenium.webdriver.support import expected_conditions as EC
-except ImportError:
-    sys.exit("Run: pip install selenium")
+
+except Exception as e:
+    print("IMPORT ERROR:")
+    print(e)
+    raise
 
 try:
     from webdriver_manager.chrome import ChromeDriverManager
