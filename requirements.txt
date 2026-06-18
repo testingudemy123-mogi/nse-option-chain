@@ -1,4 +1,6 @@
 selenium
 undetected-chromedriver
+webdriver-manager
 pandas
 openpyxl
+requests
