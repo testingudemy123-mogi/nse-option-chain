@@ -100,7 +100,7 @@ def build_driver(download_dir: str) :
     return driver
 
 
-def open_nse_homepage(driver: webdriver.Chrome) -> None:
+def open_nse_homepage(driver) -> None:
     """STEP 1 (continued) — Open NSE India homepage."""
     print("[STEP 1] Opening NSE homepage…")
     driver.get("https://www.nseindia.com/")
@@ -108,7 +108,7 @@ def open_nse_homepage(driver: webdriver.Chrome) -> None:
     print("[STEP 1] ✓ NSE homepage loaded")
 
 
-def click_option_chain(driver: webdriver.Chrome) -> None:
+def click_option_chain(driver) -> None:
     """STEP 2 — Click the Option Chain nav link."""
     print("[STEP 2] Looking for Option Chain link…")
     wait = WebDriverWait(driver, 20)
@@ -134,7 +134,7 @@ def click_option_chain(driver: webdriver.Chrome) -> None:
     sys.exit(1)
 
 
-def click_download(driver: webdriver.Chrome) -> None:
+def click_download(driver) -> None:
     """STEP 3 — Click the Download (CSV/Excel) link on the Option Chain page."""
     print("[STEP 3] Looking for Download link…")
     wait = WebDriverWait(driver, 20)
