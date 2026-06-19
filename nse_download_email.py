@@ -65,7 +65,7 @@ WAIT_FOR_DOWNLOAD_SECONDS = 30   # Max seconds to wait for the file to appear
 
 def build_driver(download_dir: str) :
     """STEP 1 — Launch Chrome maximized, set download folder."""
-    options = ChromeOptions()
+    options = webdriver.ChromeOptions()
     options.add_argument("--start-maximized")  # Use new headless mode for Chrome 109+
     options.add_argument("--disable-blink-features=AutomationControlled")
     options.add_argument("--no-sandbox")
